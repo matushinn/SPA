@@ -11,11 +11,14 @@ import UIKit
 class ViewController: UIViewController ,UITableViewDataSource{
     
     //型推論
-    var foods = ["カレー","ハンバーグ","プリン"]
-    //食べ物の画像の配列
-    var foodImages = [UIImage(named: "curry.jpg"),
-                      UIImage(named: "hanbag.jpg"),
-                      UIImage(named: "purinn.jpg")]
+    var foods = [["name":"カレー",
+                  "imageName":"curry3.jpg"],
+                  ["name":"ハンバーグ",
+                  "imageName":"hanbag3.jpg"],
+                  ["name":"プリン",
+                  "imageName":"purinn.jpg",
+                  ]]
+    
 
     @IBOutlet weak var foodTableView: UITableView!
     
@@ -27,6 +30,10 @@ class ViewController: UIViewController ,UITableViewDataSource{
         foodTableView.dataSource = self
         //不要なCellの消去
         foodTableView.tableFooterView = UIView()
+        //カスタムせるの登録
+        let nib = UINib(nibName: "FoodTableViewCell", bundle: Bundle.main)
+        foodTableView.register(nib, forCellReuseIdentifier: "Cell")
+        
     
     }
     //TableViewに表示するデータの個数
@@ -36,20 +43,26 @@ class ViewController: UIViewController ,UITableViewDataSource{
     //TableViewに表示するデータの内容
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //再利用可能なセル
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! FoodTableViewCell
         /*
         //セルに標準搭載されているtextLabel
         //indexpath.rowは今扱っているcellの番号のこと
         cell.textLabel?.text = foods[indexPath.row]
         cell.imageView?.image = foodImages[indexPath.row]
         */
-        
+        /*
         //表示内容を決める
         let foodImageView = cell.viewWithTag(1)as!UIImageView
         let foodNumLabel = cell.viewWithTag(2) as! UILabel
         
         foodImageView.image = foodImages[indexPath.row]
         foodNumLabel.text = foods[indexPath.row]
+        */
+        //表示内容を決める
+        let imageName = foods[indexPath.row]["imageName"]
+        cell.foodImageView.image = UIImage(named: imageName!)
+        cell.foodNameLabel.text = foods[indexPath.row]["name"]
+        
         
         return cell
     }

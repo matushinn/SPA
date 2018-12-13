@@ -12,9 +12,11 @@
 		378E8A6721C2226A0053D439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378E8A6521C2226A0053D439 /* Main.storyboard */; };
 		378E8A6921C2226B0053D439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378E8A6821C2226B0053D439 /* Assets.xcassets */; };
 		378E8A6C21C2226B0053D439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378E8A6A21C2226B0053D439 /* LaunchScreen.storyboard */; };
-		378E8A7621C22BCF0053D439 /* curry.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 378E8A7321C22BCF0053D439 /* curry.jpeg */; };
-		378E8A7721C22BCF0053D439 /* hanbag.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 378E8A7421C22BCF0053D439 /* hanbag.jpeg */; };
 		378E8A7821C22BCF0053D439 /* purinn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 378E8A7521C22BCF0053D439 /* purinn.jpg */; };
+		378E8A7C21C2312F0053D439 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378E8A7A21C2312F0053D439 /* FoodTableViewCell.swift */; };
+		378E8A7D21C2312F0053D439 /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378E8A7B21C2312F0053D439 /* FoodTableViewCell.xib */; };
+		378E8A7F21C236930053D439 /* hanbag3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 378E8A7E21C236930053D439 /* hanbag3.jpg */; };
+		378E8A8121C2369C0053D439 /* curry3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 378E8A8021C2369C0053D439 /* curry3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +27,11 @@
 		378E8A6821C2226B0053D439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		378E8A6B21C2226B0053D439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		378E8A6D21C2226B0053D439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		378E8A7321C22BCF0053D439 /* curry.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = curry.jpeg; sourceTree = "<group>"; };
-		378E8A7421C22BCF0053D439 /* hanbag.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hanbag.jpeg; sourceTree = "<group>"; };
 		378E8A7521C22BCF0053D439 /* purinn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = purinn.jpg; sourceTree = "<group>"; };
+		378E8A7A21C2312F0053D439 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		378E8A7B21C2312F0053D439 /* FoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
+		378E8A7E21C236930053D439 /* hanbag3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hanbag3.jpg; path = ../../../../Downloads/hanbag3.jpg; sourceTree = "<group>"; };
+		378E8A8021C2369C0053D439 /* curry3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = curry3.jpg; path = ../../../../Downloads/curry3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				378E8A6821C2226B0053D439 /* Assets.xcassets */,
 				378E8A6A21C2226B0053D439 /* LaunchScreen.storyboard */,
 				378E8A6D21C2226B0053D439 /* Info.plist */,
+				378E8A7A21C2312F0053D439 /* FoodTableViewCell.swift */,
+				378E8A7B21C2312F0053D439 /* FoodTableViewCell.xib */,
 			);
 			path = foodTableViewApp;
 			sourceTree = "<group>";
@@ -74,8 +80,8 @@
 		378E8A7921C22BEE0053D439 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				378E8A7321C22BCF0053D439 /* curry.jpeg */,
-				378E8A7421C22BCF0053D439 /* hanbag.jpeg */,
+				378E8A7E21C236930053D439 /* hanbag3.jpg */,
+				378E8A8021C2369C0053D439 /* curry3.jpg */,
 				378E8A7521C22BCF0053D439 /* purinn.jpg */,
 			);
 			path = Images;
@@ -140,11 +146,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				378E8A6C21C2226B0053D439 /* LaunchScreen.storyboard in Resources */,
-				378E8A7721C22BCF0053D439 /* hanbag.jpeg in Resources */,
 				378E8A6921C2226B0053D439 /* Assets.xcassets in Resources */,
+				378E8A7F21C236930053D439 /* hanbag3.jpg in Resources */,
+				378E8A8121C2369C0053D439 /* curry3.jpg in Resources */,
 				378E8A7821C22BCF0053D439 /* purinn.jpg in Resources */,
 				378E8A6721C2226A0053D439 /* Main.storyboard in Resources */,
-				378E8A7621C22BCF0053D439 /* curry.jpeg in Resources */,
+				378E8A7D21C2312F0053D439 /* FoodTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +164,7 @@
 			files = (
 				378E8A6421C2226A0053D439 /* ViewController.swift in Sources */,
 				378E8A6221C2226A0053D439 /* AppDelegate.swift in Sources */,
+				378E8A7C21C2312F0053D439 /* FoodTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
