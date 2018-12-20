@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="g5I-P3-tiy">
             <objects>
-                <viewController storyboardIdentifier="question" id="ixS-nd-6QT" customClass="ViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" id="ixS-nd-6QT" customClass="QuestionViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SRV-a7-1Ux">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,12 +72,12 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="ヤフオクにて過去最高金額で落札された商品はなんでしょう？" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kjn-B4-Sa6">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="何か" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kjn-B4-Sa6">
                                         <rect key="frame" x="36" y="60" width="303" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBE-zk-vJA">
@@ -88,6 +88,9 @@
                                         <state key="normal" title="恐竜の化石">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer1Button:" destination="ixS-nd-6QT" eventType="touchUpInside" id="smK-hH-lJD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TA6-Ok-FSM">
                                         <rect key="frame" x="36" y="300" width="303" height="99"/>
@@ -97,6 +100,9 @@
                                         <state key="normal" title="スペースシャトル">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer2Button:" destination="ixS-nd-6QT" eventType="touchUpInside" id="y5Z-zB-vqb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aca-ze-s6K">
                                         <rect key="frame" x="36" y="417" width="303" height="99"/>
@@ -106,6 +112,9 @@
                                         <state key="normal" title="タイムマシン">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer3Button:" destination="ixS-nd-6QT" eventType="touchUpInside" id="4ey-e4-naH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lb7-mn-06W">
                                         <rect key="frame" x="36" y="538" width="303" height="99"/>
@@ -115,6 +124,9 @@
                                         <state key="normal" title="無人島">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer4Button:" destination="ixS-nd-6QT" eventType="touchUpInside" id="tAE-xf-h8I"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hanamaru2.png" translatesAutoresizingMaskIntoConstraints="NO" id="0rq-D7-Gwq">
                                         <rect key="frame" x="62" y="208" width="250" height="250"/>
@@ -131,15 +143,25 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="VkZ-zQ-Kl3"/>
                     </view>
+                    <connections>
+                        <outlet property="answer1Button" destination="uBE-zk-vJA" id="Q3I-OK-SAa"/>
+                        <outlet property="answer2Button" destination="TA6-Ok-FSM" id="RXN-Jz-IQb"/>
+                        <outlet property="answer3Button" destination="aca-ze-s6K" id="scf-1Z-Xn5"/>
+                        <outlet property="answer4Button" destination="lb7-mn-06W" id="Uqi-8s-pGs"/>
+                        <outlet property="correctImageView" destination="0rq-D7-Gwq" id="OZB-DJ-q9h"/>
+                        <outlet property="incorrectImageView" destination="9YU-2f-Dc1" id="RqT-uW-wrN"/>
+                        <outlet property="questionNoLabel" destination="FQ8-Pi-NGA" id="0jp-yu-578"/>
+                        <outlet property="questionTextView" destination="Kjn-B4-Sa6" id="FZQ-w8-srX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gc-hy-DMU" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Resault View Controller-->
         <scene sceneID="rLJ-Sy-ifR">
             <objects>
-                <viewController id="ioN-YW-l3y" customClass="ViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resault" id="ioN-YW-l3y" customClass="ResaultViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C4v-jt-KLw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,6 +199,9 @@
                                         <state key="normal" title="Back!!">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goTitle:" destination="Q1t-RD-2eQ" eventType="touchUpInside" id="wHd-GH-b6k"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -185,8 +210,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZJw-TF-vhS"/>
                     </view>
+                    <connections>
+                        <outlet property="correctPercentLabel" destination="rmk-7g-9A5" id="vB4-ZE-sbI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaN-Mz-iw9" sceneMemberID="firstResponder"/>
+                <exit id="Q1t-RD-2eQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1912.8" y="132.68365817091455"/>
         </scene>
